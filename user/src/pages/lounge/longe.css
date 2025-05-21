@@ -1,0 +1,308 @@
+.loungeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.loungeWrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+
+.bookNow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: linear-gradient(135deg, #0071c2, #005fa3);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.bookNow:hover {
+  background: linear-gradient(135deg, #005fa3, #003d73);
+}
+
+.loungeTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.loungeAddress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+.loungeDistance {
+  color: #0071c2;
+  font-weight: 500;
+}
+
+.loungePriceHighlight {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.loungeImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.loungeImgWrapper {
+  flex: 1 0 30%;
+  min-width: 200px;
+}
+
+.loungeImg {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.loungeImg:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.loungeDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.loungeDetailsTexts {
+  flex: 3;
+  min-width: 250px;
+}
+
+.loungeDesc {
+  font-size: 16px;
+  color: #444;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.loungeDetailsPrice {
+  flex: 1;
+  min-width: 280px;
+  background-color: #f0f6ff;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 113, 194, 0.1);
+}
+
+.loungeDetailsPrice h1 {
+  font-size: 22px;
+  color: #222;
+  font-weight: 600;
+}
+
+.loungeDetailsPrice span {
+  font-size: 14px;
+  color: #555;
+}
+
+.loungeDetailsPrice h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin: 8px 0;
+}
+
+.loungeDetailsPrice button {
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.loungeDetailsPrice button:hover {
+  background-color: #005fa3;
+}
+
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sliderWrapper {
+  width: 100%;
+  max-width: 900px;
+}
+
+.sliderImg {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.close,
+.arrow {
+  position: absolute;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close {
+  top: 20px;
+  right: 30px;
+}
+
+.arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+/* Responsive for tablets and small desktops */
+@media (max-width: 1024px) {
+  .loungeWrapper {
+    max-width: 90%;
+    gap: 24px;
+  }
+
+  .loungeImgWrapper {
+    flex: 1 0 45%;
+    min-width: unset;
+  }
+
+  .loungeDetails {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .loungeDetailsTexts, 
+  .loungeDetailsPrice {
+    min-width: 100%;
+    flex: unset;
+  }
+
+  .bookNow {
+    top: 12px;
+    right: 12px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive for mobile phones */
+@media (max-width: 600px) {
+  .loungeContainer {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .loungeTitle {
+    font-size: 24px;
+  }
+
+  .loungeAddress {
+    font-size: 14px;
+  }
+
+  .loungePriceHighlight {
+    font-size: 14px;
+  }
+
+  .loungeImgWrapper {
+    flex: 1 0 100%;
+    min-width: unset;
+  }
+
+  .loungeImg {
+    height: 180px;
+  }
+
+  .loungeDetails {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .loungeDetailsPrice {
+    padding: 16px;
+  }
+
+  .loungeDetailsPrice h1 {
+    font-size: 18px;
+  }
+
+  .loungeDetailsPrice h2 {
+    font-size: 22px;
+  }
+
+  .loungeDetailsPrice button {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .bookNow {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+/* Slider adjustments on smaller screens */
+@media (max-width: 600px) {
+  .sliderWrapper {
+    max-width: 95%;
+  }
+
+  .close {
+    font-size: 28px;
+    top: 10px;
+    right: 15px;
+  }
+
+  .arrow {
+    font-size: 28px;
+    left: 10px;
+    right: 10px;
+  }
+}

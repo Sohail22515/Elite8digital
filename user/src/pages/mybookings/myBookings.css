@@ -1,0 +1,231 @@
+.myBookingsContainer {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.myBookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.myBookingCard {
+  position: relative;
+  background: #f9fafb;
+  padding: 24px 28px;
+  border-radius: 12px;
+  border: 1.5px solid #e0e3e7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.myBookingCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 113, 194, 0.15);
+}
+
+.myBookingCard h3 {
+  margin-bottom: 14px;
+  color: #0071c2;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.myBookingCard p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background-color: #4caf50; /* green */
+  color: white;
+  padding: 6px 14px;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(76, 175, 80, 0.4);
+}
+
+.paymentPendingWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.paymentPendingImage {
+  max-width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.downloadBtn {
+  margin-top: 14px;
+  padding: 10px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(25, 118, 210, 0.4);
+}
+
+.downloadBtn:hover {
+  background-color: #1565c0;
+  box-shadow: 0 5px 15px rgba(21, 101, 192, 0.6);
+}
+
+/* Receipt print style */
+.receipt {
+  background: #fff;
+  color: #222;
+  padding: 30px 40px;
+  width: 210mm; /* A4 width */
+  min-height: 297mm; /* A4 height */
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.receipt h2 {
+  text-align: center;
+  color: #4caf50;
+  margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.receipt p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.receipt strong {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .myBookingsContainer {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 32px 24px;
+  }
+
+  .myBookingCard {
+    padding: 20px 24px;
+  }
+
+  .myBookingCard h3 {
+    font-size: 20px;
+  }
+
+  .myBookingCard p {
+    font-size: 14px;
+  }
+
+  .statusBadge {
+    top: 14px;
+    right: 14px;
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+
+  .paymentPendingImage {
+    max-width: 140px;
+  }
+
+  .downloadBtn {
+    font-size: 14px;
+    padding: 9px 14px;
+  }
+
+  .receipt {
+    width: 180mm;
+    min-height: 250mm;
+    padding: 24px 30px;
+  }
+
+  .receipt h2 {
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  .receipt p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .myBookingsContainer {
+    margin: 20px 12px;
+    padding: 24px 16px;
+  }
+
+  .myBookingCard {
+    padding: 16px 18px;
+  }
+
+  .myBookingCard h3 {
+    font-size: 18px;
+  }
+
+  .myBookingCard p {
+    font-size: 13px;
+  }
+
+  .statusBadge {
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .paymentPendingWrapper {
+    justify-content: center;
+  }
+
+  .paymentPendingImage {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .downloadBtn {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+
+  .receipt {
+    width: 100%;
+    min-height: auto;
+    padding: 20px 16px;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .receipt h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .receipt p {
+    font-size: 13px;
+  }
+}

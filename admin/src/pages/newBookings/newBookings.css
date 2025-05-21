@@ -1,0 +1,124 @@
+.new {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  box-sizing: border-box;
+}
+
+.newContainer {
+  flex: 6;
+  min-width: 300px; /* prevent shrinking too much */
+  box-sizing: border-box;
+}
+
+/* Shadows and spacing */
+.top,
+.bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.top h1 {
+  color: lightgray;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.bottom .right {
+  flex: 2;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.bottom .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.bottom .right form .formInput {
+  width: 45%;
+  min-width: 140px;
+  box-sizing: border-box;
+}
+
+.bottom .right form .formInput label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: gray;
+}
+
+.bottom .right form .formInput input,
+.bottom .right form .formInput select {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.bottom .right form button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: flex-start;
+  box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .new {
+    flex-direction: column;
+  }
+  .newContainer {
+    flex: unset;
+    width: 100%;
+    margin: 0;
+  }
+  .top,
+  .bottom {
+    margin: 10px 0;
+  }
+  .bottom .right {
+    padding: 0;
+  }
+  .bottom .right form .formInput {
+    width: 100%; /* full width inputs */
+  }
+  .bottom .right form button {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .top h1 {
+    font-size: 18px;
+  }
+  .bottom .right form {
+    gap: 15px;
+  }
+  .bottom .right form .formInput input,
+  .bottom .right form .formInput select {
+    padding: 6px;
+    font-size: 13px;
+  }
+  .bottom .right form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

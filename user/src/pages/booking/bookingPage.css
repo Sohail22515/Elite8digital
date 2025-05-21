@@ -1,0 +1,133 @@
+.bookingContainer {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bookingForm label {
+  font-weight: 600;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.bookingForm input, 
+.bookingForm select {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.bookingForm input:focus,
+.bookingForm select:focus {
+  outline: none;
+  border-color: #0071c2;
+  box-shadow: 0 0 6px rgba(0, 113, 194, 0.3);
+}
+
+.servicesOptions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.servicesOptions label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bookingOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submitBookingBtn {
+  background-color: #0071c2;
+  color: white;
+  padding: 15px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.submitBookingBtn:hover {
+  background-color: #005fa3;
+}
+
+h1, h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #0071c2;
+  font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+  .bookingContainer {
+    padding: 20px;
+    margin: 30px 16px;
+  }
+
+  .bookingForm {
+    gap: 18px;
+  }
+
+  .servicesOptions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submitBookingBtn {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  h1, h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .bookingForm input,
+  .bookingForm select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookingContainer {
+    padding: 16px;
+    margin: 20px 10px;
+  }
+
+  .submitBookingBtn {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+

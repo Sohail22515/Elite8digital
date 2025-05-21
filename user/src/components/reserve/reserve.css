@@ -1,0 +1,164 @@
+.reserve {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.rContainer {
+  background-color: #fff;
+  padding: 30px 40px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.rClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #555;
+  transition: color 0.2s ease;
+  user-select: none;
+}
+
+.rClose:hover {
+  color: #0071c2;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.rTitle {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0071c2;
+}
+
+.rDesc {
+  font-weight: 400;
+  color: #555;
+}
+
+.rMax {
+  font-size: 13px;
+  color: #888;
+}
+
+.rPrice {
+  font-weight: 700;
+  font-size: 16px;
+  color: #222;
+}
+
+.rSelectRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+  min-width: 70px;
+}
+
+.rButton {
+  border: none;
+  padding: 14px 0;
+  background-color: #0071c2;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 25px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.rButton:hover:not(:disabled) {
+  background-color: #005a9e;
+}
+
+.rButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+/* ✅ Responsive: Tablets and below */
+@media (max-width: 768px) {
+  .rContainer {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .rItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .rTitle {
+    font-size: 16px;
+  }
+
+  .rPrice {
+    font-size: 15px;
+  }
+
+  .rClose {
+    font-size: 22px;
+  }
+}
+
+/* ✅ Responsive: Mobile screens */
+@media (max-width: 480px) {
+  .rContainer {
+    padding: 16px;
+    width: 95%;
+  }
+
+  .rTitle {
+    font-size: 15px;
+  }
+
+  .rDesc {
+    font-size: 14px;
+  }
+
+  .rButton {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+}

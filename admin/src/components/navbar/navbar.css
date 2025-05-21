@@ -1,0 +1,125 @@
+.navbar {
+  height: 50px;
+  border-bottom: 0.5px solid rgb(231, 228, 228);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  padding: 0 10px; /* add some side padding */
+  box-sizing: border-box;
+}
+
+.navbar .wrapper {
+  width: 100%;
+  padding: 0; /* remove extra padding to save space */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  gap: 10px; /* space between wrapped items */
+}
+
+.navbar .wrapper .search {
+  flex: 1;
+  min-width: 150px; /* keep it usable but allow shrinking */
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid lightgray;
+  padding: 3px 8px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.navbar .wrapper .search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+}
+
+.navbar .wrapper .search input::placeholder {
+  font-size: 12px;
+}
+
+.navbar .wrapper .items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* allow wrapping */
+  gap: 10px;
+}
+
+.navbar .wrapper .items .item {
+  display: flex;
+  align-items: center;
+  margin-right: 0; /* remove margin, we use gap on container */
+  position: relative;
+  cursor: pointer;
+  min-width: 30px; /* keep items visible */
+}
+
+.navbar .wrapper .items .item .icon {
+  font-size: 20px;
+}
+
+.navbar .wrapper .items .item .avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navbar .wrapper .items .item .counter {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    font-size: 12px;
+  }
+  .navbar .wrapper .search {
+    max-width: 200px;
+  }
+  .navbar .wrapper .items .item .icon {
+    font-size: 18px;
+  }
+  .navbar .wrapper .items .item .avatar {
+    width: 25px;
+    height: 25px;
+  }
+  .navbar .wrapper .items .item .counter {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .wrapper {
+    justify-content: center;
+    gap: 15px;
+  }
+  .navbar .wrapper .search {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .navbar .wrapper .items {
+    justify-content: center;
+  }
+}

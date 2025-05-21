@@ -1,0 +1,45 @@
+.footer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #003580;
+}
+
+.fLists {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+  flex: 1 1 150px; /* flexible width with minimum */
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.fListItem:hover {
+  color: #0071c2;
+}
+
+@media only screen and (max-width: 768px) {
+  .fLists {
+    flex-direction: column;
+  }
+
+  .fList {
+    flex: 1 1 100%;
+  }
+}

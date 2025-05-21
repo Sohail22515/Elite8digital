@@ -1,0 +1,119 @@
+.widget {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 10px;
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  border-radius: 10px;
+  height: 100px;
+  transition: all 0.3s ease;
+}
+
+/* Left and right columns */
+.widget .left,
+.widget .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1; /* take equal space */
+  margin: 0 10px;
+}
+
+.widget .left .title,
+.widget .right .title {
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(160, 160, 160);
+}
+
+.widget .left .counter,
+.widget .right .counter {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.widget .left .link,
+.widget .right .link {
+  width: max-content;
+  font-size: 12px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.widget .left .percentage,
+.widget .right .percentage {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.widget .left .percentage.positive,
+.widget .right .percentage.positive {
+  color: green;
+}
+
+.widget .left .percentage.negative,
+.widget .right .percentage.negative {
+  color: red;
+}
+
+.widget .left .icon,
+.widget .right .icon {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .widget {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+  }
+
+  .widget .left,
+  .widget .right {
+    margin: 5px 0;
+  }
+
+  .widget .left .counter,
+  .widget .right .counter {
+    font-size: 24px;
+  }
+
+  .widget .left .title,
+  .widget .right .title {
+    font-size: 13px;
+  }
+
+  .widget .left .percentage,
+  .widget .right .percentage {
+    font-size: 13px;
+  }
+
+  .widget .left .icon,
+  .widget .right .icon {
+    font-size: 16px;
+    padding: 3px;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .widget .left .counter,
+  .widget .right .counter {
+    font-size: 20px;
+  }
+
+  .widget .left .title,
+  .widget .right .title {
+    font-size: 12px;
+  }
+
+  .widget .left .link,
+  .widget .right .link {
+    font-size: 11px;
+  }
+}

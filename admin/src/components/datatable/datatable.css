@@ -1,0 +1,142 @@
+.datatable {
+  height: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: auto; /* Enable horizontal scroll on small screens */
+}
+
+.datatable .datatableTitle {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.datatable .datatableTitle .link {
+  text-decoration: none;
+  color: green;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid green;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.datatable .cellWithImg {
+  display: flex;
+  align-items: center;
+}
+
+.datatable .cellWithImg .cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px; /* Reduced margin for small screens */
+}
+
+.datatable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.datatable .cellWithStatus.active {
+  background-color: rgba(0, 128, 0, 0.05);
+  color: green;
+}
+
+.datatable .cellWithStatus.pending {
+  background-color: rgba(255, 217, 0, 0.05);
+  color: goldenrod;
+}
+
+.datatable .cellWithStatus.passive {
+  background-color: rgba(255, 0, 0, 0.05);
+  color: crimson;
+}
+
+.datatable .cellAction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.datatable .cellAction .viewButton,
+.datatable .cellAction .deleteButton {
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.datatable .cellAction .viewButton {
+  color: rgb(19, 189, 25);
+  border: 1px dotted rgba(0, 0, 139, 0.596);
+}
+
+.datatable .cellAction .deleteButton {
+  color: crimson;
+  border: 1px dotted rgba(220, 20, 60, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .datatable {
+    padding: 10px;
+    height: auto;
+  }
+
+  .datatable .datatableTitle {
+    font-size: 20px;
+  }
+
+  .datatable .datatableTitle .link {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .datatable .cellWithImg .cellImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .datatable .cellWithStatus {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .datatable .cellAction {
+    gap: 8px;
+  }
+
+  .datatable .cellAction .viewButton,
+  .datatable .cellAction .deleteButton {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .datatable .datatableTitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .datatable .datatableTitle .link {
+    width: 100%;
+    text-align: center;
+  }
+
+  
+}

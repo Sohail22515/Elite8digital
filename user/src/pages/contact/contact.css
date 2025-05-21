@@ -1,0 +1,138 @@
+.contact {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .contactTitle {
+    font-size: 32px;
+    color: #003580;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .contactSubtitle {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contactForm label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #003580;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+  }
+  
+  .contactForm input:focus,
+  .contactForm textarea:focus {
+    border-color: #0071c2;
+    box-shadow: 0 0 5px rgba(0, 113, 194, 0.3);
+  }
+  
+  .contactForm button {
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactForm button:hover {
+    background-color: #005999;
+  }
+  
+  @media (max-width: 480px) {
+    .contact {
+      padding: 20px;
+    }
+  
+    .contactTitle {
+      font-size: 24px;
+    }
+  
+    .contactSubtitle {
+      font-size: 14px;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .contact {
+      margin: 40px 20px;
+      padding: 30px;
+    }
+  
+    .contactTitle {
+      font-size: 26px;
+    }
+  
+    .contactSubtitle {
+      font-size: 15px;
+    }
+  
+    .contactForm {
+      gap: 16px;
+    }
+  
+    .contactForm input,
+    .contactForm textarea {
+      font-size: 13px;
+      padding: 10px;
+    }
+  
+    .contactForm button {
+      font-size: 15px;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact {
+      margin: 30px 12px;
+      padding: 20px;
+    }
+  
+    .contactTitle {
+      font-size: 22px;
+    }
+  
+    .contactSubtitle {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+  
+    .contactForm label {
+      font-size: 14px;
+    }
+  
+    .contactForm button {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; /* allow wrapping on small screens */
+}
+
+.list .listContainer {
+  flex: 6;
+  min-width: 300px; /* prevent container from getting too narrow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column; /* stack containers vertically */
+  }
+  .list .listContainer {
+    flex: unset;
+    width: 100%; /* full width on small screens */
+  }
+}

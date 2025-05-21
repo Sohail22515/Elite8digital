@@ -1,0 +1,229 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  gap: 30px;
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.listSearch {
+  flex: 1;
+  background-color: #fff8e1; /* softer yellow */
+  padding: 24px 20px;
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+  height: max-content;
+  box-shadow: 0 4px 12px rgba(254, 187, 2, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.listSearch:hover {
+  box-shadow: 0 6px 20px rgba(254, 187, 2, 0.5);
+}
+
+.lsTitle {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.lsItem > label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.lsItem > input {
+  height: 38px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.lsItem > input:focus {
+  border-color: #0071c2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 113, 194, 0.3);
+}
+
+.lsItem > span {
+  height: 38px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1.5px solid #ddd;
+  font-size: 14px;
+  color: #444;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.lsItem > span:hover {
+  background-color: #f0f4ff;
+  border-color: #0071c2;
+  color: #0071c2;
+}
+
+.lsOptions {
+  padding: 10px 0;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #555;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lsOptionInput {
+  width: 60px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  font-size: 14px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.lsOptionInput:focus {
+  border-color: #0071c2;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 113, 194, 0.3);
+}
+
+.listSearch > button {
+  margin-top: 15px;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #0071c2, #005fa3);
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.listSearch > button:hover {
+  background: linear-gradient(135deg, #005fa3, #003d73);
+}
+
+.listResult {
+  flex: 3;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  min-height: 300px; /* you can adjust this */
+}
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .listWrapper {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 90%;
+    padding: 16px;
+  }
+
+  .listSearch {
+    position: relative;
+    top: unset;
+    height: auto;
+    box-shadow: 0 4px 12px rgba(254, 187, 2, 0.3);
+    padding: 20px;
+  }
+
+  .listResult {
+    flex: unset;
+    min-height: 250px;
+    padding: 20px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+  .listContainer {
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .listWrapper {
+    max-width: 100%;
+    flex-direction: column;
+    padding: 12px;
+    gap: 16px;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .listSearch {
+    padding: 16px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(254, 187, 2, 0.25);
+    position: relative;
+    top: unset;
+    height: auto;
+  }
+
+  .lsTitle {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .lsItem > label {
+    font-size: 12px;
+  }
+
+  .lsItem > input,
+  .lsOptionInput {
+    height: 34px;
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .listSearch > button {
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  .listResult {
+    flex: unset;
+    padding: 16px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-height: 200px;
+    border-radius: 8px;
+  }
+}

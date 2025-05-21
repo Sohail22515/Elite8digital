@@ -1,0 +1,54 @@
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* add some padding for small screens */
+  box-sizing: border-box;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px; /* fixed width for desktop */
+  max-width: 100%; /* prevent overflow on small screens */
+}
+
+.lInput {
+  height: 30px;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .lContainer {
+    width: 100%;
+  }
+  .lInput, .lButton {
+    font-size: 14px;
+    padding: 8px;
+    height: 35px;
+  }
+}
