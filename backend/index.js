@@ -17,7 +17,7 @@ const app=express()
 
 
 app.use(cors({
-  origin: 'https://your-frontend-render-url.onrender.com', // replace this with your actual frontend URL
+  origin: 'http://localhost:3000/login', // replace this with your actual frontend URL
   credentials: true
 }));
 
