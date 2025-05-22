@@ -23,7 +23,7 @@ const Register = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/auth/register", user);
+      await axios.post("https://elite8digital.onrender.com/api/auth/register", user);
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed.");

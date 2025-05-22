@@ -10,9 +10,16 @@ import bookingsRoute from "./routes/bookings.js"
 
 import usersRoute from "./routes/users.js";
 import cookieParser from "cookie-parser";
+
+import cors from 'cors';
 dotenv.config();
 const app=express()
-// 
+
+
+app.use(cors({
+  origin: 'https://your-frontend-render-url.onrender.com', // replace this with your actual frontend URL
+  credentials: true
+}));
 
 
 const connect = async () => {

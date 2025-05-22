@@ -22,12 +22,21 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("/auth/login", credentials);
+      console.log("login start");
+      const res = await axios.post("https://elite8digital.onrender.com/api/auth/login", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
+      console.log("credentials", credentials);
       navigate("/")
     } catch (err) {
-      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+      console.log("Full error:", err);
+      if (err.response) {
+        console.log("Error response data:", err.response.data);
+        dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+      } else {
+        dispatch({ type: "LOGIN_FAILURE", payload: { message: err.message || "Unknown error" } });
+      }
     }
+    
   };
 
 

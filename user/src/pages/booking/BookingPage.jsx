@@ -32,7 +32,7 @@ const BookingPage = () => {
     const fetchBookedDates = async () => {
       try {
         // console.log(loungeId);
-        const res = await axios.get(`/bookings/booked-dates/${loungeId}`);
+        const res = await axios.get(`https://elite8digital.onrender.com/api/bookings/booked-dates/${loungeId}`);
         const ranges = res.data;
         const allBookedDates = [];
 

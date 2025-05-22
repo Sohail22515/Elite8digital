@@ -14,7 +14,7 @@ const MyBookings = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get(`/bookings/user/${user._id}`);
+        const res = await axios.get(`https://elite8digital.onrender.com/api/bookings/user/${user._id}`);
         console.log("Bookings data:", res.data);
         setBookings(res.data);
       } catch (err) {
